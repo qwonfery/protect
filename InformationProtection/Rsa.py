@@ -32,7 +32,7 @@ def rsa_sipher(p: int, q: int):
 
     alphabet = get_koefs()
     #print(alphabet)
-    with open("TestText", "r", encoding="utf-8") as f:
+    with open("../../InformationProtection/TestText", "r", encoding="utf-8") as f:
         text = list(f.read())
     print(text)
     with open("cyphered", "w") as f:

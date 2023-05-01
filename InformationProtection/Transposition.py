@@ -63,13 +63,13 @@ def desypher_columns(filename: str, col_num: int, kfilename: str):
             file_bytes.append(f.read(1))
 
     row_num = int(size / col_num)
-    with open("de_cyphered", "wb") as newfile:
+    with open("de_cyphered.doc", "wb") as newfile:
         for row in range(row_num):
             for item in key:
                 newfile.write(file_bytes[row + row_num * item])
 
 if __name__ == '__main__':
-    file = 'TestText'
+    file = '../../InformationProtection/TestText'
     get_stats(file)
 
     sypher_columns(file, 5, "key.txt")
